@@ -5,14 +5,16 @@ void main() {
 }
 
 void test() {
-  // var names = {'foo', 'bar', 'baz'};
-  // names.add('foo');
-  // names.add('bar');
-  // names.add('Baz');
-  // print(names); // its print a unique list
+  const person = {
+    'age': 30,
+    'name': 'John Doe',
+  };
+  print(person);
+  person['name'] = 'FOOOOO';
+  print(person);
 
-  const things = {'foo', 1};
-  print (things);
+  person['lastname'] = 'Baz';
+  print(person);
 
 }
 
