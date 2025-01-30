@@ -5,12 +5,15 @@ void main() {
 }
 
 void test() {
-  final names = ['Foo', 'Bar', 'Baz'];
-  final foo  = names[3];
-  print(foo);
-  final length = names.length;
-  print(length);
-  names.add('Qux');
+  // var names = {'foo', 'bar', 'baz'};
+  // names.add('foo');
+  // names.add('bar');
+  // names.add('Baz');
+  // print(names); // its print a unique list
+
+  const things = {'foo', 1};
+  print (things);
+
 }
 
 class MyApp extends StatelessWidget {
