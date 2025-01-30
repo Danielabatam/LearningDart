@@ -5,14 +5,12 @@ void main() {
 }
 
 void test() {
-  var age = 20;
-  final ageMinusOne = --age;
-  print(age);
-  print(ageMinusOne);
-
-  // final name = 'Foo';
-  // if (name == 'Foo') print('Hello, Foo!');
-  // print("Hello World");
+  final names = ['Foo', 'Bar', 'Baz'];
+  final foo  = names[3];
+  print(foo);
+  final length = names.length;
+  print(length);
+  names.add('Qux');
 }
 
 class MyApp extends StatelessWidget {
