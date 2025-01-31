@@ -4,56 +4,62 @@ void main() {
   runApp(const MyApp());
 }
 
-void test() {
-  // const person = {
-  //   'age': 30,
-  //   'name': 'John Doe',
-  // };
-  // print(person);
-  // person['name'] = 'FOOOOO';
-  // print(person);
+//----- Enumerations --------------------------------
+// enum PersonProperties {
+//   name,
+//   age,
+//   height,
+// }
 
-  // person['lastname'] = 'Baz';
-  // print(person);
+// void test() {
+//    print(PersonProperties.name);
+// }
 
-  // --------------
+// //----- Switch Statement --------------------------------
+// enum AnimalType { cat, dog, bird, fish }
 
-  // String? name = null;
-  // print(name);
-  // name = 'John Doe';
-  // print(name);
+// void test(AnimalType animalType) {
+//   // print(animalType);
 
-  // --------------
-  // int? age = 20; {}
+//   switch (animalType) {
+//     case AnimalType.cat:
+//       print('Cat');
+//       break;
+//     case AnimalType.dog:
+//       print('Dog');
+//       break;
+//     case AnimalType.bird:
+//       print('Bird');
+//       break;
+//     case AnimalType.fish:
+//       print('Fish');
+//   }
+//   print("FUNCTION IS FINISHED");
+// }
 
-  // --------------
+// // et au niveau de test () dans le corps
+// // test(AnimalType.cat);
 
-  // final List<int?>? numbers = [1, 2, 3, 4, 5];
+//----- Classes --------------------------------
 
-  //-----  Pick the first non null value || operator ??
+class Person {
 
-  // const String? firstName = null;
-  // const String? middleName = 'Bar';
-  // const String? lastName = 'Doe';
+void run() {
+ print("Running");
+}
 
-  // const firstNonNullValue = firstName ?? middleName ?? lastName; // si la 1ere variable est nulle on passe à la suivante jsuqu'a trouver une valeur non nulle
 
-  // -------------- Null-aware assignement operator || ??= operator --------------------
-  // Cet operateur se rassure qu'une variable est non nulle avant de lui assigner une valeur
-  // on mets en parametre de la fonction void (String? firstName, String? middleName, String? lastName)
-  //par conséquent on les mets parametres dans test également ligne 58. ||     test(null, 'foe', 'bar');
+void breathe() {
+  print('Breathing');
+}
 
-  // String? name = firstName;
-  // name ??= lastName; // si name est null on lui assigne lastName
-  // name ??= middleName; // si name est toujours null on lui assigne middleName
-  // print(name);
 
-  // -------------- Conditional Innvocation || ?. operator --------------------
-  // void test(List<String>? names) {
-  //   names?.add('Baz');
-  // }
-  //url: dart.dev/null-safety/u,derstanding-null-safety
+}
 
+void test () {
+  final  person = Person();
+  person.run();
+  person.breathe();
 }
 
 class MyApp extends StatelessWidget {
