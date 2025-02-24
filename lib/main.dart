@@ -52,8 +52,12 @@ class Person {
   // }
 
   final String name;
+//----- Constructor --------------------------------
 
   Person(this.name);
+
+
+  //----- Method --------------------------------
 
   void printName() {
     print('I will now print the name of this person');
@@ -67,8 +71,9 @@ void test() {
   // person.run();
   // person.breathe();
 
-  final foo = Person('Foo Bar'):
-    print(foo.name);
+  final foo = Person('Foo Bar');
+  print(foo.name);
+  foo.printName()
 
 }
 
