@@ -43,23 +43,28 @@ void main() {
 //----- Classes --------------------------------
 
 class Person {
+  // void run() {
+  //   print("Running");
+  // }
+  //
+  // void breathe() {
+  //   print('Breathing');
+  // }
 
-void run() {
- print("Running");
+  final String name;
+
+  Person(this.name);
+
 }
 
+void test() {
+  // final person = Person();
+  // person.run();
+  // person.breathe();
 
-void breathe() {
-  print('Breathing');
-}
+  final foo = Person('Foo Bar'):
+    print(foo.name);
 
-
-}
-
-void test () {
-  final  person = Person();
-  person.run();
-  person.breathe();
 }
 
 class MyApp extends StatelessWidget {
