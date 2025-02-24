@@ -4,77 +4,25 @@ void main() {
   runApp(const MyApp());
 }
 
-//----- Enumerations --------------------------------
-// enum PersonProperties {
-//   name,
-//   age,
-//   height,
-// }
 
-// void test() {
-//    print(PersonProperties.name);
-// }
+//----- Inheritance & Subclassing --------------------------------
 
-// //----- Switch Statement --------------------------------
-// enum AnimalType { cat, dog, bird, fish }
-
-// void test(AnimalType animalType) {
-//   // print(animalType);
-
-//   switch (animalType) {
-//     case AnimalType.cat:
-//       print('Cat');
-//       break;
-//     case AnimalType.dog:
-//       print('Dog');
-//       break;
-//     case AnimalType.bird:
-//       print('Bird');
-//       break;
-//     case AnimalType.fish:
-//       print('Fish');
-//   }
-//   print("FUNCTION IS FINISHED");
-// }
-
-// // et au niveau de test () dans le corps
-// // test(AnimalType.cat);
-
-//----- Classes --------------------------------
-
-class Person {
-  // void run() {
-  //   print("Running");
-  // }
-  //
-  // void breathe() {
-  //   print('Breathing');
-  // }
-
-  final String name;
-//----- Constructor --------------------------------
-
-  Person(this.name);
-
-
-  //----- Method --------------------------------
-
-  void printName() {
-    print('I will now print the name of this person');
-    print(name);
+class LivingThing {
+  void breathe() {
+    print('Ling thing is the breathing');
   }
 
+  void move() {
+    print('I am moving');
+  }
 }
 
+class Cat extends LivingThing {}
+
 void test() {
-  // final person = Person();
-  // person.run();
-  // person.breathe();
-
-  final foo = Person('Foo Bar');
-  print(foo.name);
-  foo.printName()
-
+  final fluffers = Cat();
+  fluffers.move();
+  fluffers.breathe();
 }
 
 class MyApp extends StatelessWidget {
