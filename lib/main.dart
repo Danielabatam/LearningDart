@@ -55,6 +55,11 @@ class Person {
 
   Person(this.name);
 
+  void printName() {
+    print('I will now print the name of this person');
+    print(name);
+  }
+
 }
 
 void test() {
