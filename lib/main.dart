@@ -5,11 +5,11 @@ void main() {
 }
 
 
-//----- Inheritance & Subclassing --------------------------------
+//----- Abstract Classes --------------------------------
 
-class LivingThing {
+abstract class LivingThing {
   void breathe() {
-    print('Ling thing is the breathing');
+    print('Living thing is the breathing');
   }
 
   void move() {
@@ -20,9 +20,11 @@ class LivingThing {
 class Cat extends LivingThing {}
 
 void test() {
-  final fluffers = Cat();
-  fluffers.move();
-  fluffers.breathe();
+  // final fluffers = Cat();
+  // fluffers.move();
+  // fluffers.breathe();
+
+  final thing = Cat();
 }
 
 class MyApp extends StatelessWidget {
