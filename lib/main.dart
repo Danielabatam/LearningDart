@@ -4,27 +4,21 @@ void main() {
   runApp(const MyApp());
 }
 
+//----- Factory Constructors  --------------------------------
 
-//----- Abstract Classes --------------------------------
+class Cat {
+  final String name;
 
-abstract class LivingThing {
-  void breathe() {
-    print('Living thing is the breathing');
-  }
-
-  void move() {
-    print('I am moving');
+  Cat(this.name);
+  factory Cat.fluffBall() {
+    return Cat('Fluff Ball');
   }
 }
 
-class Cat extends LivingThing {}
-
 void test() {
-  // final fluffers = Cat();
-  // fluffers.move();
-  // fluffers.breathe();
+  final fluffBall = Cat.fluffBall();
+  print(fluffBall.name);
 
-  final thing = Cat();
 }
 
 class MyApp extends StatelessWidget {
