@@ -4,28 +4,16 @@ void main() {
   runApp(const MyApp());
 }
 
-//----- Extensions  --------------------------------
-
-class Cat {
-  final String name;
-  Cat(this.name);
+//----- Future  --------------------------------
+Future <int> heavyFutureThatMultipliesByTwo(int a) {
+  return Future.delayed(const Duration(seconds: 3), () {
+    return a * 2;
+  });
 }
 
-class Person {
-  final String firstName;
-  final String lastName;
-  Person(this.firstName, this.lastName);
-}
-
-extension Run on Cat {
-  void run() {
-    print('Cat $name is running');
-  }
-}
-
-void test() {
-  final meow = Cat('Fluffers');
-  meow.run();
+void test() async{
+  final result = await heavyFutureThatMultipliesByTwo(10);
+  print(result);
 }
 
 class MyApp extends StatelessWidget {
