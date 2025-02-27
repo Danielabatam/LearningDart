@@ -4,21 +4,28 @@ void main() {
   runApp(const MyApp());
 }
 
-//----- Factory Constructors  --------------------------------
+//----- Extensions  --------------------------------
 
 class Cat {
   final String name;
-
   Cat(this.name);
-  factory Cat.fluffBall() {
-    return Cat('Fluff Ball');
+}
+
+class Person {
+  final String firstName;
+  final String lastName;
+  Person(this.firstName, this.lastName);
+}
+
+extension Run on Cat {
+  void run() {
+    print('Cat $name is running');
   }
 }
 
 void test() {
-  final fluffBall = Cat.fluffBall();
-  print(fluffBall.name);
-
+  final meow = Cat('Fluffers');
+  meow.run();
 }
 
 class MyApp extends StatelessWidget {
