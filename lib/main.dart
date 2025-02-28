@@ -5,16 +5,33 @@ void main() {
 }
 
 //----- Future  --------------------------------
-Future <int> heavyFutureThatMultipliesByTwo(int a) {
-  return Future.delayed(const Duration(seconds: 3), () {
-    return a * 2;
+// Future <int> heavyFutureThatMultipliesByTwo(int a) {
+//   return Future.delayed(const Duration(seconds: 3), () {
+//     return a * 2;
+//   });
+// }
+//
+// void test() async{
+//   final result = await heavyFutureThatMultipliesByTwo(10);
+//   print(result);
+// }
+
+
+//----- Streams  --------------------------------
+Stream <String> getName() {
+  // return Stream.value('Foo');
+  return Stream.periodic(const Duration(seconds: 1), (value) {
+    return 'Foo';
   });
 }
 
-void test() async{
-  final result = await heavyFutureThatMultipliesByTwo(10);
-  print(result);
+void test() async {
+  await for (final value in getName()) { // à la différence des Future ici le await ce mets au début de la ligne et non devant la fonction
+    print(value);
+  }
+  print('Stream finished working');
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
